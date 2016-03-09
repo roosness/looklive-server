@@ -1,4 +1,4 @@
-body .inner-wrapper {
+main {
     padding: 50px;
 }
 
@@ -8,58 +8,57 @@ body {
     margin: 0;
 }
 
-body .nav {
+nav {
     background-color: #252525;
     padding: .5em 1em;
+    min-height: 30px;
 }
 
-body .nav .nav-inner img {
+nav img {
     height: 30px;
     display: block;
     float: left;
 }
 
-body .nav .nav-items {
+nav ul {
     list-style: none;
     float: right;
     margin: 0 auto;
 }
 
-body .nav .nav-items li {
+nav ul li {
     float: left;
     height: 100%;
     line-height: 30px;
     margin-right: 15px;
 }
 
-body .nav .nav-items li a {
+nav ul a {
     color: white;
     text-decoration: none;
+    
 }
 
-body .nav .nav-items li a img {
+body nav li a img {
     height: 1em;
     position: relative;
     margin-right: .3em;
     top: 6px;
 }
 
-body .nav .nav-items li a:hover {
+body nav a:hover {
     color: #d84a4a;
 }
 
-body .clear {
-    clear: both;
-}
 
-body .header {
+body > section {
     width: 100%;
     height: 50vh;
     max-height: 56vw;
     overflow: hidden;
 }
 
-body .header img {
+body > section img {
     width: 100%;
 }
 
@@ -67,40 +66,44 @@ body a {
     color: #00B7FF;
 }
 
-body .feed-item {
+
+
+.feed ul {
+    list-style: none;
+    padding:0;
+}
+.feed li  {
     width: 300px;
     height: 600px;
     float: left;
     margin: .5em;
 }
 
-body .feed-item img {
+.feed li img {
     max-width: 100%;
 }
 
-body .appearance-right, body .appearance-left {
+.appearance section {
     float: left;
 }
 
-body .feed-item h2 img, body .appearance-right h2 img {
+.feed li  .avatar, main .appearance-right .avatar {
     width: 2em;
     height: 2em;
     margin-right: .5em;
     border-radius: 50%;
+    display: inline-block;
+    
 }
 
-body .feed-item h2, body .appearance h2 {
+.feed-item h2, .appearance h2 {
     font-size: 16px;
 
-    display: -webkit-flex;
-    display: flex;
-
-    -webkit-align-items: center;
-    align-items: center;
+    display: inline-block;
 
     margin-bottom: .5em;
 }
-
+/*tot jier ------------------------------------------------*/
 body .feed-item h1 {
     margin-top: 0;
     font-size: 21px;
