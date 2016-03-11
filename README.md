@@ -1,6 +1,4 @@
-# LookLive server
-
-
+# LookLive server Rosa Schuurmans
 ## Analysis
 
 ### HTML semantisch maken
