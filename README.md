@@ -10,7 +10,7 @@ After:
 <img src="public/images/screenshots/semantic_after.png" alt="">
 ### CSS optimaliseren
 Before:
-
+<img src="public/images/screenshots/header_before.png" alt="">
 After:
 #### selectors veranderen
 
@@ -26,10 +26,10 @@ Before:
 <img src="public/images/screenshots/header_before.png" alt="">
 After:
 <img src="public/images/screenshots/header_after.png" alt="">
-#### Icon sprites toevoegen
 
 ### one page app maken
+Before:
+<img src="public/images/screenshots/app_before.png" alt="">
+After:
+<img src="public/images/screenshots/app_after.png" alt="">
 
-#### JSON naar html
-
-#### navigatie
