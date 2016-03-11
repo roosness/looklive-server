@@ -9,11 +9,16 @@ Before:
 After:
 <img src="public/images/screenshots/semantic_after.png" alt="">
 ### CSS optimaliseren
+Before:
 
+After:
 #### selectors veranderen
 
 #### Icon sprites toevoegen
-
+Before:
+<img src="public/images/screenshots/img_sprites_before.png" alt="">
+After:
+<img src="public/images/screenshots/img_sprites_after.png" alt="">
 #### alle floats weghalen / vervangen door flexbox
 
 #### responsive header images
