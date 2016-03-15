@@ -135,11 +135,11 @@ body a {
 .appearance {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 .appearance > section {
-    
+    margin:0 1em;
     align-self: flex-start;
 }
 

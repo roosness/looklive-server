@@ -1,59 +1,84 @@
-(function () {
-    'use strict';
+    //credits to Dennis van Bennekom for the code
+(function() {
+    function init() {
+        var links = document.querySelectorAll('a[data-url]');
 
-    /**
-     * Invoked when the page is ready.
-     *
-     * @param  {Function} fn
-     * @return {void}
-     */
-    function ready(fn) {
-        if (document.readyState !== 'loading') {
-            fn();
-        } else {
-            document.addEventListener('DOMContentLoaded', fn);
-        }
+        [].forEach.call(links, function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                var url = event.currentTarget.getAttribute('data-url');
+                var href = event.currentTarget.href;
+
+                history.pushState(null, null, href);
+
+                loadPage(url);
+            });
+        });
+
+        window.addEventListener('popstate', function(event) {
+            var url = '/api' + window.location.pathname;
+
+            if (url === '/api/') {
+                url = '/api/feed';
+            }
+
+            loadPage(url)
+        });
     }
 
-    /**
-     * Set the classes on the appearence page.
-     *
-     * @return {void}
-     */
-    function appearance() {
-        var firstProduct = document.querySelector('.product');
-        var firstIndicator = document.querySelector(
-            '.product-indicator[data-uuid="' + firstProduct.getAttribute('data-uuid') + '"]'
-        );
-        var indicators = document.querySelectorAll('.product-indicator');
+    function loadPage(url, href) {
+        var wrapper = document.querySelector('main');
 
-        firstProduct.classList.add('product-active');
+        fetch(url)
+            .then(response => response.text())
+            .then(text => {
+                wrapper.innerHTML = text;
+                ready();
+            });
+    }
+
+    function appearance() {
+        // Appearance page
+        var products = document.querySelectorAll('.product');
+
+        products[0].classList.add('product-active');
+
+        var firstIndicator = document.querySelector('.product-indicator[data-uuid="' + products[0].dataset.uuid + '"]');
+
         firstIndicator.classList.add('product-indicator-active');
 
-        Array.prototype.forEach.call(indicators, function (el) {
-            el.addEventListener('click', function (event) {
-                var id = event.currentTarget.getAttribute('data-uuid');
+        var indicators = document.querySelectorAll('.product-indicator');
 
-                document
-                    .querySelector('.product-active')
-                    .classList.remove('product-active');
+        [].forEach.call(indicators, function(indicator) {
+            indicator.addEventListener('click', function(event) {
+                var id = event.target.dataset.uuid;
 
-                document
-                    .querySelector('.product-indicator-active')
-                    .classList.remove('product-indicator-active');
+                var currentIndicatorActive = document.querySelector('.product-indicator-active');
+                currentIndicatorActive.classList.remove('product-indicator-active');
 
-                document
-                    .querySelector('.product[data-uuid="' + id + '"]')
-                    .classList.add('product-active');
+                var newIndicatorActive = event.target;
+                newIndicatorActive.classList.add('product-indicator-active');
 
-                event.currentTarget.classList.add('product-indicator-active');
+                var currentActive = document.querySelector('.product-active');
+                currentActive.classList.remove('product-active');
+
+                var newActive = document.querySelector('.product[data-uuid="' + id + '"]');
+                newActive.classList.add('product-active');
             });
         });
     }
 
-    ready(function () {
+    function ready() {
+        init();
+
+        // Credit: Robert van Steen
         if (/appearance/.test(window.location.href)) {
             appearance();
         }
-    });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        ready();
+    }, false);
 }());

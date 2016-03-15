@@ -8,14 +8,12 @@ router.get('/feed', function(req, res, next) {
             res.status(404);
             next();
         }
-        
+
         res.render('feed', { title: 'Feed', items: JSON.parse(data), layout: false });
     })
-
 });
 
 router.get('/appearance/:uuid', function(req, res, next) {
-
     fs.readFile('resources/appearance/'+req.params.uuid+'.json', 'utf8', function(err, data) {
         if(err) {
             res.status(404);
@@ -30,9 +28,8 @@ router.get('/appearance/:uuid', function(req, res, next) {
             products.push(JSON.parse(product));
         });
 
-        res.render('appearance', { title: item.title, item: item , products: products, layout: false });
-    })
-//    sendFile('appearance/'+req.params.uuid+'.json', res);
+        res.render('appearance', { title: item.title, item: item , products: products, layout: false});
+    });
 });
 
 router.get('/product/:uuid', function(req, res, next) {
