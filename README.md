@@ -30,3 +30,8 @@ Before:
 After:
 <img src="public/images/screenshots/app_after.png" alt="">
 
+### google font link aangepast
+### header img nog kleiner
+### jquery weg
+
+

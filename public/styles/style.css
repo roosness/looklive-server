@@ -8,13 +8,15 @@ body {
     margin: 0;
 }
 
-<<<<<<< HEAD
+
 nav {
        
     display: flex;
     align-items: center;
     justify-content: space-between;
-=======
+    background-color: #252525;
+    padding: .5em 1em;
+}
 i {
     text-indent: 200%;
     white-space: nowrap;
@@ -22,12 +24,6 @@ i {
     display: inline-block
 }
 
-
-body .nav {
->>>>>>> donnywals/master
-    background-color: #252525;
-    padding: .5em 1em;
-}
 
 
 nav img {
