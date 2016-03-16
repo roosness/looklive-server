@@ -35,3 +35,6 @@ After:
 ### jquery weg
 
 
+#bronnen Progressive Web App
+https://developers.google.com/web/fundamentals/getting-started/web-starter-kit/setting-up?hl=en
+http://www.ness-ses.com/progressive-web-apps-the-new-future-of-mobile-apps/
