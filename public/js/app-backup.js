@@ -1,4 +1,3 @@
-
     //credits to Dennis van Bennekom for the code
 (function() {
     function init() {

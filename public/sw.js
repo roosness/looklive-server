@@ -8,7 +8,9 @@ this.addEventListener('install', function(event) {
             return cache.addAll([
                 '../styles/style.css',
                 '../js/app.js',
-                '../images/logo.png'
+                '../images/logo.png',
+                '../images/header-small.jpg',
+                '../images/icon_sprite.png',
             ]);
         })
     );

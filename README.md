@@ -1,6 +1,22 @@
 # LookLive server Rosa Schuurmans
-## Analysis
+##Progressive web app
+Met een Progressive Web App wordt een web applicatie bedoeld die aanvoelt als een native app. 
+Toch hoeft er niets geinstalleerd te worden, anders dan een native app, en zijn ze goed bruikbaar met een trage internetverbinding. 
+Een lijst met features van een Progressive web app:
+- responsive
+- push notificatie
+- button op het homescreen
+- fullscreen
+- maakt gebruik van offline caching
 
+
+https://developers.google.com/web/fundamentals/getting-started/web-starter-kit/setting-up?hl=en
+http://www.ness-ses.com/progressive-web-apps-the-new-future-of-mobile-apps/
+
+
+
+## Analysis
+*screenshots moeten nog geupdate worden....
 ### HTML semantisch maken
 Before:
 <img src="public/images/screenshots/semantic_before.png" alt="">
