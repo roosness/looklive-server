@@ -1,4 +1,5 @@
 # LookLive server Rosa Schuurmans
+Te bekijken via https://looklive-server.herokuapp.com . Later wordt dit anders, maar de domeinnaam wordt momenteel nog verhuisd...
 ##Progressive web app
 Met een Progressive Web App wordt een web applicatie bedoeld die aanvoelt als een native app. 
 Toch hoeft er niets geinstalleerd te worden, anders dan een native app, en zijn ze goed bruikbaar met een trage internetverbinding. 
