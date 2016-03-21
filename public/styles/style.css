@@ -1,135 +1,125 @@
-body .inner-wrapper {
+/*Basis*/
+
+main {
     padding: 50px;
 }
-
 body {
     font: 14px Raleway, Helvetica, Arial, sans-serif;
     background-color: #f1f1f1;
     margin: 0;
 }
+a {
+    color: #00B7FF;
+}
+/*nav*/
 
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #252525;
+    padding: .5em 1em;
+}
 i {
     text-indent: 200%;
     white-space: nowrap;
     overflow: hidden;
     display: inline-block
 }
-
-
-body .nav {
-    background-color: #252525;
-    padding: .5em 1em;
-}
-
-body .nav .nav-inner img {
+nav img {
     height: 30px;
-    display: block;
-    float: left;
+    display: inline-block;
 }
-
-body .nav .nav-items {
+nav ul {
+    margin: 0;
     list-style: none;
-    float: right;
-    margin: 0 auto;
 }
-
-body .nav .nav-items li {
-    float: left;
+nav ul li {
+    display: inline-block;
     height: 100%;
     line-height: 30px;
     margin-right: 15px;
 }
-
-body .nav .nav-items li a {
+nav ul a {
     color: white;
     text-decoration: none;
+    padding-left: 1.5em;
 }
-
-body .nav .nav-items li a img {
-    height: 1em;
-    position: relative;
-    margin-right: .3em;
-    top: 6px;
-}
-
-body .nav .nav-items li a:hover {
+nav a:hover {
     color: #d84a4a;
 }
+/*header image*/
 
-body .clear {
-    clear: both;
-}
-
-body .header {
+> section {
     width: 100%;
     height: 50vh;
     max-height: 56vw;
     overflow: hidden;
 }
-
-body .header img {
+> section img {
     width: 100%;
 }
+/*Feed*/
 
-body a {
-    color: #00B7FF;
+.feed ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
-
-body .feed-item {
+.feed li {
     width: 300px;
     height: 600px;
-    float: left;
     margin: .5em;
 }
-
-body .feed-item img {
+.feed li img {
     max-width: 100%;
 }
-
-body .appearance-right, body .appearance-left {
-    float: left;
+.feed li h2 {
+    display: inline-block;
 }
-
-body .feed-item h2 img, body .appearance-right h2 img {
+.feed li .avatar,
+main .appearance-right .avatar {
     width: 2em;
     height: 2em;
     margin-right: .5em;
     border-radius: 50%;
+    display: inline-block;
 }
-
-body .feed-item h2, body .appearance h2 {
+.feed-item h2,
+.appearance h2 {
     font-size: 16px;
-
-    display: -webkit-flex;
-    display: flex;
-
-    -webkit-align-items: center;
-    align-items: center;
-
+    width: 50%;
     margin-bottom: .5em;
 }
-
-body .feed-item h1 {
+.feed-item h1 {
     margin-top: 0;
     font-size: 21px;
 }
+/*detail*/
+/*Kleine aanpassingen*/
 
-body .appearance h2 {
+a {
+    color: #00B7FF;
+}
+.appearance h2 {
     font-size: 21px;
 }
-
-body .appearance .appearance-left {
+.appearance .appearance-left {
     width: 400px;
     height: 600px;
     margin-right: 2em;
     position: relative;
+    display: inline-block;
 }
-
-body .appearance-left img {
+.appearance .appearance-right {
+    display: inline-block;
+}
+.appearance-left img {
     width: 100%;
 }
-
-body .appearance .appearance-left .product-indicator {
+.appearance .appearance-left .product-indicator {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -137,19 +127,16 @@ body .appearance .appearance-left .product-indicator {
     border: 2px solid #ddd;
     border-radius: 50%;
 }
-
-body .appearance .appearance-left .product-indicator.product-indicator-active {
+.appearance .appearance-left .product-indicator.product-indicator-active {
     background-color: #b4da55;
 }
-
-body .appearance .appearance-products-inner {
+.appearance .appearance-products-inner {
     width: 400px;
     position: relative;
     overflow: hidden;
     height: 700px;
 }
-
-body .appearance .appearance-products-inner .product {
+.appearance .appearance-products-inner .product {
     width: 450px;
     max-width: 100%;
     position: absolute;
@@ -157,57 +144,51 @@ body .appearance .appearance-products-inner .product {
     left: 100%;
     transition: left .3s;
 }
-
-body .appearance .appearance-products-inner .product.product-active {
+.appearance .appearance-products-inner .product.product-active {
     left: 0;
 }
-
-body .appearance-products h1 {
+.appearance-products h1 {
     font-size: 21px;
     color: #333;
     padding-bottom: .5em;
     border-bottom: 1px solid #ddd;
 }
-
-body .actual, body .similar {
+.actual,
+.similar {
     display: -webkit-flex;
     display: flex;
-
     padding-bottom: .5em;
     border-bottom: 1px solid #ddd;
 }
-
-body .actual .image, body .similar .image {
+.actual .image,
+.similar .image {
     width: 200px;
-
     -webkit-flex-shrink: 0;
     flex-shrink: 0;
-
     margin-right: 1em;
 }
-
-body .similar .image {
+.similar .image {
     width: 150px;
 }
-
-body .actual .image h1, body .similar .image h1 {
+.actual .image h1,
+.similar .image h1 {
     margin: .5em 0;
     color: #333;
     font-size: 16px;
     border-bottom: none;
 }
-
-body .actual .image img, body .similar .image img {
+.actual .image img,
+.similar .image img {
     width: 100%;
 }
-
-body .actual .info h1, body .similar .info h1 {
+.actual .info h1,
+.similar .info h1 {
     font-size: 21px;
     margin: 1.5em 0 .5em 0;
     border-bottom: none;
 }
-
-body .actual .info h2, body .similar .info h2 {
+.actual .info h2,
+.similar .info h2 {
     font-size: 16px;
     margin: 1em 0;
 }
