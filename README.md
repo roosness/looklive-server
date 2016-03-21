@@ -31,6 +31,17 @@ screenshot after:
 * https://css-tricks.com/efficiently-rendering-css/
 https://boagworld.com/dev/why-you-should-care-about-css-page-performance/
 
+###1.4: Interface icons
+screenshot before:
+<img src="/public/screenshots/screenshot_html_after.png" alt="">
+screenshot after:
+<img src="/public/screenshots/screenshot_interfaceicons_after.png" alt="">
+###1.5: SPA
+
+###Extra: Jquery
+###Extra: header img
+
+
 
 TODO:
 
