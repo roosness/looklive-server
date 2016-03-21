@@ -50,13 +50,13 @@ nav a:hover {
 }
 /*header image*/
 
-> section {
+body > section {
     width: 100%;
     height: 50vh;
     max-height: 56vw;
     overflow: hidden;
 }
-> section img {
+body > section img {
     width: 100%;
 }
 /*Feed*/
@@ -85,41 +85,45 @@ main .appearance-right .avatar {
     height: 2em;
     margin-right: .5em;
     border-radius: 50%;
+    
     display: inline-block;
 }
 .feed-item h2,
 .appearance h2 {
     font-size: 16px;
     width: 50%;
-    margin-bottom: .5em;
+    display: inline-block;
+
 }
 .feed-item h1 {
     margin-top: 0;
     font-size: 21px;
 }
 /*detail*/
-/*Kleine aanpassingen*/
-
-a {
-    color: #00B7FF;
+.appearance {
+    display: flex;
+    justify-content: center;
 }
-.appearance h2 {
+.appearance > section {
+    margin:0 0;
+
+}
+  .appearance h2 {
     font-size: 21px;
 }
-.appearance .appearance-left {
+
+  .appearance .appearance-left {
     width: 400px;
     height: 600px;
     margin-right: 2em;
     position: relative;
-    display: inline-block;
 }
-.appearance .appearance-right {
-    display: inline-block;
-}
-.appearance-left img {
+
+  .appearance-left img {
     width: 100%;
 }
-.appearance .appearance-left .product-indicator {
+
+  .appearance .appearance-left .product-indicator {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -127,16 +131,19 @@ a {
     border: 2px solid #ddd;
     border-radius: 50%;
 }
-.appearance .appearance-left .product-indicator.product-indicator-active {
+
+  .appearance .appearance-left .product-indicator.product-indicator-active {
     background-color: #b4da55;
 }
-.appearance .appearance-products-inner {
+
+  .appearance .appearance-products-inner {
     width: 400px;
     position: relative;
     overflow: hidden;
     height: 700px;
 }
-.appearance .appearance-products-inner .product {
+
+  .appearance .appearance-products-inner .product {
     width: 450px;
     max-width: 100%;
     position: absolute;
@@ -144,51 +151,59 @@ a {
     left: 100%;
     transition: left .3s;
 }
-.appearance .appearance-products-inner .product.product-active {
+
+  .appearance .appearance-products-inner .product.product-active {
     left: 0;
 }
-.appearance-products h1 {
+
+  .appearance-products h1 {
     font-size: 21px;
     color: #333;
     padding-bottom: .5em;
     border-bottom: 1px solid #ddd;
 }
-.actual,
-.similar {
+
+  .actual,   .similar {
     display: -webkit-flex;
     display: flex;
+
     padding-bottom: .5em;
     border-bottom: 1px solid #ddd;
 }
-.actual .image,
-.similar .image {
+
+  .actual .image,   .similar .image {
     width: 200px;
+
     -webkit-flex-shrink: 0;
     flex-shrink: 0;
+
     margin-right: 1em;
 }
-.similar .image {
+
+  .similar .image {
     width: 150px;
 }
-.actual .image h1,
-.similar .image h1 {
+
+  .actual .image h1,   .similar .image h1 {
     margin: .5em 0;
     color: #333;
     font-size: 16px;
     border-bottom: none;
 }
-.actual .image img,
-.similar .image img {
+
+  .actual .image img,   .similar .image img {
     width: 100%;
 }
-.actual .info h1,
-.similar .info h1 {
+
+  .actual .info h1,   .similar .info h1 {
     font-size: 21px;
     margin: 1.5em 0 .5em 0;
     border-bottom: none;
 }
-.actual .info h2,
-.similar .info h2 {
+
+  .actual .info h2,   .similar .info h2 {
     font-size: 16px;
     margin: 1em 0;
 }
+/*Kleine aanpassingen*/
+
