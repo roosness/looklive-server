@@ -24,9 +24,16 @@ screenshot before:
 screenshot after:
 <img src="/public/screenshots/screenshot_interfaceicons_after.png" alt="">
 ###1.5: SPA
+Before:
+<img src="/public/screenshots/screenshot_headerimg_after.png" alt="">
+After:
 
-###Extra: Jquery
 ###Extra: header img
+De headerimg is verkleind van 2mb naar 3 afzonderlijke images, allen niet groter dan 100 kb. Deze worden vervolgens in een responsive image gebruikt, en het scheelt aanzienlijk in de tijd.
+screenshot before:
+<img src="/public/screenshots/screenshot_interfaceicons_after.png" alt="">
+screenshot after:
+<img src="/public/screenshots/screenshot_spa_after.png" alt="">
 
 
 
