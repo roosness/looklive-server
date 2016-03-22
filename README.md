@@ -39,10 +39,12 @@ screenshot after:
 ###2.1 Service Worker
 hier komt de service worker
 -wat staat er in de service worker etc
+alleen de afbeeldingen worden niet geladen omdat deze online ergens staan.
 
 screenshot before:
-
+<img src="/public/screenshots/screenshot_spa_after.png" alt="">
 screenshot after:
+<img src="/public/screenshots/screenshot_serviceworker_after.png" alt="">
 
 ##Opdrachten week 3 - Analyse
 ###3.2 optimaliseer HTTP Requests
@@ -77,3 +79,4 @@ TODO:
 
 ONLINE WEB SERVER (HEROKU?)
 VIEWPORT IN DE META VOOR MOBILE
+NAVIGAITE SINGLE PAGE
