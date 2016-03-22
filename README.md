@@ -37,6 +37,7 @@ screenshot after:
 
 ##Opdrachten week 2 - Analyse
 ###2.1 Service Worker
+hier komt de service worker
 -wat staat er in de service worker etc
 
 screenshot before:
