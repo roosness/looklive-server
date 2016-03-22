@@ -35,8 +35,44 @@ screenshot before:
 screenshot after:
 <img src="/public/screenshots/screenshot_spa_after.png" alt="">
 
+##Opdrachten week 2 - Analyse
+###2.1 Service Worker
+-wat staat er in de service worker etc
 
+screenshot before:
+
+screenshot after:
+
+##Opdrachten week 3 - Analyse
+###3.2 optimaliseer HTTP Requests
+Hoeveel zijn het aantal nu?
+
+screenshot before:
+
+screenshot after:
+
+###3.3 Optimaliseer content images
+
+screenshot before:
+
+screenshot after:
+
+###3.4 Optimaliseer web fonts
+
+screenshot before:
+
+screenshot after:
+
+
+##Onderzoek Progressive web App
+
+####bronnen:
+##Onderzoek Task Managers
+
+
+####bronnen:
 
 TODO:
 
+ONLINE WEB SERVER (HEROKU?)
 VIEWPORT IN DE META VOOR MOBILE
