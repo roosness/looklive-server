@@ -8,8 +8,8 @@ router.get('/', function(req, res, next) {
             res.status(404);
             next();
         }
-
-        res.render('feed', { title: 'Feed', items: JSON.parse(data) });
+        
+        res.render('feed', { title: 'appel', items: data });
     })
 });
 

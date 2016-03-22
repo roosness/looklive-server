@@ -39,7 +39,10 @@
                 console.log('request' + request.readyState);
                 if(request.readyState === 4 ) {
                     if(request.status === 200) {
+                        
+                        // var data = JSON.parse(request.response);
                         console.log(request);
+                        
                         template.feedTemplate(request.response);
                         if(dataType == 'appearance') { 
                             appearance();
@@ -55,6 +58,7 @@
             if(dataType == 'feed') {
 
                 request.open('GET', 'api/feed');
+                // request.responseType = 'json'
                 request.send();
             }
             else if(dataType == 'appearance') {
@@ -69,7 +73,7 @@
     }
     var template = { 
         feedTemplate : function(data) {
-            console.log('feed template')
+            console.log('feed ' + data)
             container.innerHTML = data
         }
     }

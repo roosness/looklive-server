@@ -89,9 +89,29 @@ After:
 <img src="/public/screenshots/after_worker.png" alt="">
 
 ##Bronnen:
-Bronnen
 http://designingforperformance.com/optimizing-markup-and-styles/
 https://css-tricks.com/efficiently-rendering-css/
 https://browserdiet.com/en/#html
 http://stackoverflow.com/questions/21253714/why-is-single-page-apps-faster-when-it-generally-has-to-make-more-requests-per-p
+
+##Onderzoek Progressive Web App
+Een Progressive Web App is een middenweg tussen een web applicatie en een native applicatie. Het speelt zich nogsteeds af in de browser, waardoor er niets geinstalleerd hoeft te worden. 
+
+- niet installeren
+- goed met slechte verbindingen
+- cachet deelen
+- volledige scherm
+- 
+
+###Bronnen:
+https://developers.google.com/web/progressive-web-apps
+http://developer.telerik.com/featured/what-progressive-web-apps-mean-for-the-web/
+https://remysharp.com/2016/03/18/progressive-web-apps-the-long-game
+
+##Onderzoek Task managers
+
+###Bronnen:
+https://css-tricks.com/gulp-for-beginners/
+
+
 
