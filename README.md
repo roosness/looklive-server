@@ -37,15 +37,12 @@ screenshot after:
 
 ##Opdrachten week 2 - Analyse
 ###2.1 Service Worker
--wat staat er in de service worker etc
-
-screenshot before:
-
-screenshot after:
+Zie de serviceworkerV2 branch
 
 ##Opdrachten week 3 - Analyse
 ###3.2 optimaliseer HTTP Requests
 Hoeveel zijn het aantal nu?
+zie slides
 
 screenshot before:
 
@@ -58,7 +55,7 @@ screenshot before:
 screenshot after:
 
 ###3.4 Optimaliseer web fonts
-
+http://thenewcode.com/878/Slash-Page-Load-Times-With-CSS-Font-Subsetting
 screenshot before:
 
 screenshot after:
@@ -68,9 +65,21 @@ screenshot after:
 
 ####bronnen:
 ##Onderzoek Task Managers
+Task managers voeren bepaalde taken die door de gebruiker aangegeven worden herhaaldelijk uit. Deze taken kunnen alle kanten op gaan. Van het automatisch compilen van JS bestanden tot het toevoegen van browser prefixes aan CSS. Task managers werken vooral goed in teamverband. Een taskmanager kan een team dwingen om allemaal in dezelfde standaard schrijft. Bekende task managers zijn gulp en grunt.
+Toch kan een task manager ook een aantal problemen met zich meebrengen. Zo hangt een groot gedeelte van je workflow af van meerdere plugins, die allemaal updates met zich meebrengen. 
+NPM zou hier een betere oplossing voor zijn. Deze is een stuk minder geavanceerd, en
+
+
+- welke task managers
+- welke tasks
 
 
 ####bronnen:
+http://blog.keithcirkel.co.uk/why-we-should-stop-using-grunt/
+http://gulpjs.com/
+http://brunch.io/
+https://jmperezperez.com/gulp-js/
+http://www.100percentjs.com/just-like-grunt-gulp-browserify-now/
 
 TODO:
 
