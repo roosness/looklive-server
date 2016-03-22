@@ -2,86 +2,96 @@
 
 ##Opdrachten week 1 - Analyse
 Voor de looklive app is aangepast heeft deze de volgende prestaties online:
-Voor het analyseren van de performance is de web throttling ingesteld op 3g, zodat er een constante snelheid in de tests is. 
-<img src="/public/screenshots/screenshot_before_ev.png" alt="">
+Voor het analyseren van de performance is de web throttling ingesteld op Good 3g, zodat er een constante snelheid in de tests is. 
+Before: 
+DOMContentLoaded: 1.48 S
+Load event: 15.51S
+<img src="/public/screenshots/before_ev.png" alt="">
 
-###1.2: Semantische HTML
-Semantische HTML maakt je webpagina niet per se sneler, maar zeker leesbaarder en meer maintainable. Daarnaast zal de CSS automatisch geupdate moeten worden.
+###Semantische HTML & CSS
+De huidige HTML bevat veel ongebruikte divs, divs in het algemeen die het geheeld onleesbaar maakten. Deze zijn veranderd in een aantal sections en articles. Daarnaast zijn de twee grootste veranderingen in de CSS het toevoegen van Flexbox in plaats van floats, en het gebruik van transforms inplaats van animate left. 
 
-Screenshot before:
-<img src="/public/screenshots/screenshot_before_ev.png" alt="">
+Before: 
+DOMContentLoaded: 1.48 S
+Load event: 15.51S
+
+After: 
+DOMContentLoaded:985 ms
+Load event:  14.76 S
+
 screenshot afer:
-<img src="/public/screenshots/screenshot_html_after.png" alt="">
-De html file sizes zijn iets kleiner geworden, en door iets specifiekere selectoren is de snelheid toch iets vooruit gegaan.
-bronnen:
+<img src="/public/screenshots/after_html.png" alt="">
+
+###Interface Icons
+De iconen in het menu zijn veranderd in een image sprite, die dan met CSS gepositioneerd wordt. 
+De verbeteringen zijn echter minimaal voor de performance. 
+
+Before:
+DOMContentLoaded: 985 ms
+Load event:  14.76 S
+
+After: 
+DOMContentLoaded: 979 ms
+Load event: 14.74S
+After:
+<img src="/public/screenshots/icon_after.png" alt="">
+
+
+###Header img verkleind
+De originele header img was 1.87 MB en werd op elke device op dit formaat ingeladen . Door de afbeelding kleiner te maken en in verschillende formaten als een responsive image weer te geven is de performance er goed op vooruit gegaan.
+
+Before: 
+DOMContentLoaded: 979 ms
+Load event: 14.74S
+
+
+After: 
+DOMContentLoaded: 904 ms
+Load event: 11.17S
+<img src="/public/screenshots/after_header.png" alt="">
+
+###One Page App
+Een single page App scheelt in principe niet veel in performance, maar zal vooral in het ‘verder klikken’ schelen, omdat dan niet de complete pagina opnieuw geladen hoeft te worden. 
+Ik heb gebruik gemaakt van routie.js.
+
+Before: 
+DOMContentLoaded: 904 ms
+Load event: 11.17S
+
+After: 
+DOMContentLoaded: 773 ms
+Load event: 11.59 S
+<img src="/public/screenshots/after_spa.png" alt="">
+###Google Fonts aangepast
+De google font link die momenteel ingeladen wordt stuurt veel meer versies dan daadwerkelijk gebruikt worden. Na de aanpassing wordt enkel de 400 gebruikt. 
+
+Before: 
+DOMContentLoaded: 773 ms
+Load event: 11.59 S
+
+After: 
+DOMContentLoaded: 1.16 S
+Load event: 11.86 S
+<img src="/public/screenshots/after_google.png" alt="">
+
+##Week 2:
+###Service worker
+De service worker zal veel schelen in de perfomance.
+Momenteel gebruik ik de service worker om de CSS, het logo, de header image, de icon sprite en de app.js op te slaan. Dit zijn de dingen die in principe iedere keer hetzelfde zullen zijn.
+
+Before: 
+DOMContentLoaded: 1.16 S
+Load event: 11.86 S
+
+After: 
+DOMContentLoaded: 134 ms
+Load event: 575 ms
+<img src="/public/screenshots/after_worker.png" alt="">
+
+##Bronnen:
+Bronnen
 http://designingforperformance.com/optimizing-markup-and-styles/
 https://css-tricks.com/efficiently-rendering-css/
 https://browserdiet.com/en/#html
+http://stackoverflow.com/questions/21253714/why-is-single-page-apps-faster-when-it-generally-has-to-make-more-requests-per-p
 
-###1.4: Interface icons
-screenshot before:
-<img src="/public/screenshots/screenshot_html_after.png" alt="">
-screenshot after:
-<img src="/public/screenshots/screenshot_interfaceicons_after.png" alt="">
-###1.5: SPA
-Before:
-<img src="/public/screenshots/screenshot_headerimg_after.png" alt="">
-After:
-
-###Extra: header img
-De headerimg is verkleind van 2mb naar 3 afzonderlijke images, allen niet groter dan 100 kb. Deze worden vervolgens in een responsive image gebruikt, en het scheelt aanzienlijk in de tijd.
-screenshot before:
-<img src="/public/screenshots/screenshot_interfaceicons_after.png" alt="">
-screenshot after:
-<img src="/public/screenshots/screenshot_spa_after.png" alt="">
-
-##Opdrachten week 2 - Analyse
-###2.1 Service Worker
-Zie de serviceworkerV2 branch
-
-##Opdrachten week 3 - Analyse
-###3.2 optimaliseer HTTP Requests
-Hoeveel zijn het aantal nu?
-zie slides
-
-screenshot before:
-
-screenshot after:
-
-###3.3 Optimaliseer content images
-
-screenshot before:
-
-screenshot after:
-
-###3.4 Optimaliseer web fonts
-http://thenewcode.com/878/Slash-Page-Load-Times-With-CSS-Font-Subsetting
-screenshot before:
-
-screenshot after:
-
-
-##Onderzoek Progressive web App
-
-####bronnen:
-##Onderzoek Task Managers
-Task managers voeren bepaalde taken die door de gebruiker aangegeven worden herhaaldelijk uit. Deze taken kunnen alle kanten op gaan. Van het automatisch compilen van JS bestanden tot het toevoegen van browser prefixes aan CSS. Task managers werken vooral goed in teamverband. Een taskmanager kan een team dwingen om allemaal in dezelfde standaard schrijft. Bekende task managers zijn gulp en grunt.
-Toch kan een task manager ook een aantal problemen met zich meebrengen. Zo hangt een groot gedeelte van je workflow af van meerdere plugins, die allemaal updates met zich meebrengen. 
-NPM zou hier een betere oplossing voor zijn. Deze is een stuk minder geavanceerd, en
-
-
-- welke task managers
-- welke tasks
-
-
-####bronnen:
-http://blog.keithcirkel.co.uk/why-we-should-stop-using-grunt/
-http://gulpjs.com/
-http://brunch.io/
-https://jmperezperez.com/gulp-js/
-http://www.100percentjs.com/just-like-grunt-gulp-browserify-now/
-
-TODO:
-
-ONLINE WEB SERVER (HEROKU?)
-VIEWPORT IN DE META VOOR MOBILE
