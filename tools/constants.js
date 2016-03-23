@@ -1,3 +1,5 @@
+/* jshint node: true */
+
 var constants = {
     "similar_type": [
         {"id": "c10ec518-fc08-4482-8d01-95f78c58c037", "name": "Similar"},
@@ -146,7 +148,7 @@ function getCategory(id) {
         }
     });
 
-    return category
+    return category;
 }
 
 function getParentCategory(id) {
@@ -159,7 +161,7 @@ function getParentCategory(id) {
         }
     });
 
-    return category
+    return category;
 }
 
 module.exports = {

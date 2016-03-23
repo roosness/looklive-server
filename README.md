@@ -91,7 +91,20 @@ After:
 
 ##Week 3:
 ### Reduce HTTP Requests
-Door een 'laadmeer' knop boven aan de pagina toe te voegen is bij het opstarten van de pagina momenteel het aantal requests verlaagd naar 21. Dit kan nog minder worden. MAAR DAT KOMT ZOMETEEN WEL.
+Door een 'laadmeer' knop boven aan de pagina toe te voegen is bij het opstarten van de pagina momenteel het aantal requests verlaagd van 165 naar 21. Daarnaast heb ik een aantal grunt tasks aangemaakt waarmee CSS automatisch wordt samengevoegd, Javascript automatisch wordt samen gevoegd, en alles ge-minified. Omdat ik maar 1 CSS bestand had, en maar 1 Javascript, scheelt het niet in het aantal requests, maar kan dit in de toekomst wel van pas komen. 
+
+Voor de test is de service worker uitgeschakeld.
+Before: 
+* D0MContentLoaded: 1.16 S
+* Load event: 11.86 S
+
+Before: 
+* D0MContentLoaded: 119 ms
+* Load event: 1.03 S.
+
+Iedere keer als er op laad meer geklikt wordt, worden er weer nieuwe requests uitgevoerd.
+<img src="/public/screenshots/http_after.png" alt=""> 
+
 
 
 ##Bronnen:

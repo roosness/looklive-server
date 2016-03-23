@@ -12,7 +12,7 @@ body {
 a {
     color: #00B7FF;
 }
-#loadmore {
+body > a {
     display: inline-block;
     margin:3em auto 1em;
     text-align: center;

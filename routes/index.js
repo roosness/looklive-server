@@ -1,3 +1,5 @@
+/* jshint node: true */
+
 var fs = require('fs');
 var express = require('express');
 var router = express.Router();
