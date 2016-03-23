@@ -88,6 +88,12 @@ After:
 * Load event: 575 ms
 <img src="/public/screenshots/after_worker.png" alt="">
 
+
+##Week 3:
+### Reduce HTTP Requests
+Door een 'laadmeer' knop boven aan de pagina toe te voegen is bij het opstarten van de pagina momenteel het aantal requests verlaagd naar 21. Dit kan nog minder worden. MAAR DAT KOMT ZOMETEEN WEL.
+
+
 ##Bronnen:
 http://designingforperformance.com/optimizing-markup-and-styles/
 https://css-tricks.com/efficiently-rendering-css/

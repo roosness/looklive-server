@@ -1,8 +1,23 @@
+var clicks = 0;
+
 (function () {
     'use strict';
 
     var container = document.querySelector('main');
+    var loadMoreButton = document.getElementById('loadmore');
+    var pagingStart = 0;
+    var pagingEnd = 5;
+    
+    console.log(loadMoreButton);
+    loadMoreButton.onclick = function () {
 
+        console.log('click', clicks);
+        pagingStart += 5;
+        pagingEnd += 5;
+        data.getData('feed', 0, pagingStart, pagingEnd);
+        
+        return false
+    }
     var app = {
         init: function() {
             console.log('start app.init');
@@ -19,7 +34,11 @@
                     window.location.pathname = '';
                 },
                 'feed': function() {
-                    data.getData('feed');
+                    
+                    while (container.hasChildNodes()) {
+                        container.removeChild(container.firstChild);
+                    }
+                    data.getData('feed', 0, 0, 5);
                 },
                 'appearance/:id' :function(id) {
                     console.log('id' + id);
@@ -30,7 +49,7 @@
         }
     }
     var data = {
-        getData : function(dataType, id) {
+        getData : function(dataType, id, start, end) {
             console.log('getData');
 
             var request = new XMLHttpRequest();
@@ -43,7 +62,8 @@
                         // var data = JSON.parse(request.response);
                         console.log(request);
                         
-                        template.feedTemplate(request.response);
+                        template.feedTemplate(request.response, dataType);
+                        
                         if(dataType == 'appearance') { 
                             appearance();
                         }
@@ -57,8 +77,8 @@
             console.log('datatype' + dataType);
             if(dataType == 'feed') {
 
-                request.open('GET', 'api/feed');
-                // request.responseType = 'json'
+                request.open('GET', 'api/feed' + start + ',' + end
+                    );
                 request.send();
             }
             else if(dataType == 'appearance') {
@@ -66,15 +86,19 @@
                 request.send();
                 
             }
-            
-            
-
         }
     }
     var template = { 
-        feedTemplate : function(data) {
-            console.log('feed ' + data)
-            container.innerHTML = data
+        feedTemplate : function(data, dataType) {
+            if(dataType == 'appearance') {
+                container.innerHTML = data
+            }
+            else if(dataType == 'feed') {
+                var wrapper = document.createElement('section');
+                wrapper.innerHTML = data;
+                  container.insertBefore(wrapper, container.childNodes[0]);
+            }
+            
         }
     }
     

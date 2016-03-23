@@ -1,22 +1,48 @@
 var fs = require('fs');
 var express = require('express');
 var router = express.Router();
-
+var startItems;
+var endItems;
 router.get('/feed', function(req, res, next) {    
 //    sendFile('feed.json', res);
-
-    //uitgelegd in het werkcollege van woensdag
+    console.log(req);
     fs.readFile('resources/feed.json', 'utf8', function(err, data) {
         if(err) {
             res.status(404);
             next();
         }
 
-        res.render('feed', { title: 'Feed', items: JSON.parse(data), layout: false });
+        var data = JSON.parse(data);
+
+        var items = data.slice(0, 5);
+        startItems += 5;
+        endItems  += 5;
+        res.render('feed', { feed: true, title: 'feed', items: items, layout: false });
     })
 
 });
+router.get('/feed:uuid', function(req, res, next) {    
+//    sendFile('feed.json', res);
 
+    console.log(req.params.uuid);
+    fs.readFile('resources/feed.json', 'utf8', function(err, data) {
+        if(err) {
+            res.status(404);
+            next();
+        }
+
+        var pag = req.params.uuid;
+        var pagingArray = pag.split(',')
+        console.log(pagingArray);
+        var data = JSON.parse(data);
+
+        var items = data.slice(pagingArray[0], pagingArray[1]);
+        startItems += 5;
+        endItems  += 5;
+        res.render('feed', { feed: true, title: 'feed', items: items, layout: false });
+    })
+
+});
 router.get('/appearance/:uuid', function(req, res, next) {
 
     fs.readFile('resources/appearance/'+req.params.uuid+'.json', 'utf8', function(err, data) {
