@@ -60,7 +60,7 @@ nav li a:before {
     position: absolute;
     width: 1.5em;
     height: 1.5em;
-    background: url('../images/icon_sprite.png');
+    background: url('../images/min/icon_sprite.png');
     background-size: cover;
     background-position: -0px 100%;
  

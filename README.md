@@ -98,14 +98,37 @@ Before:
 * D0MContentLoaded: 1.16 S
 * Load event: 11.86 S
 
-Before: 
+After: 
 * D0MContentLoaded: 119 ms
 * Load event: 1.03 S.
 
 Iedere keer als er op laad meer geklikt wordt, worden er weer nieuwe requests uitgevoerd.
 <img src="/public/screenshots/http_after.png" alt=""> 
 
+### optimize content images
+Om de images automatisch te kunnen optimaliseren heb ik een task aan grunt toegevoegd die hier voor zorgd. De images die nu gebruikt worden, zijn echter al handmatig geoptimaliseerd, en zal dus niet schelen in de tijd.
 
+Voor de test is de service worker uitgeschakeld.
+Before: 
+* D0MContentLoaded: 1.16 S
+* Load event: 11.86 S
+
+After: 
+* D0MContentLoaded: 1.16 S
+* Load event: 11.86 S
+
+<img src="/public/screenshots/after_google.png" alt="">
+### Fonts
+kletsen over FOUT	
+
+Voor de test is de service worker uitgeschakeld.
+Before: 
+* D0MContentLoaded: 1.16 S
+* Load event: 11.86 S
+
+Before: 
+* D0MContentLoaded: 119 ms
+* Load event: 1.03 S.
 
 ##Bronnen:
 http://designingforperformance.com/optimizing-markup-and-styles/
@@ -128,7 +151,7 @@ http://developer.telerik.com/featured/what-progressive-web-apps-mean-for-the-web
 https://remysharp.com/2016/03/18/progressive-web-apps-the-long-game
 
 ##Onderzoek Task managers
-
+welke shit heb ik in mijn task manager gepropt?
 ###Bronnen:
 https://css-tricks.com/gulp-for-beginners/
 

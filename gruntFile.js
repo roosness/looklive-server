@@ -47,6 +47,17 @@ module.exports = function(grunt) {
 	        'public/min/app.min.js': ['public/js/app.js']
 	      }
 	    }
+ 	},
+ 	imagemin: {                          
+    
+    dynamic: {                        
+      files: [{
+        expand: true,                 
+        cwd: 'public/images',         
+        src: ['**/*.{png,jpg,gif}'],
+        dest: 'public/images/min'     
+      }]
+    }
   }
   });
  
@@ -58,4 +69,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-csslint');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
 }; 
