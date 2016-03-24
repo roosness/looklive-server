@@ -19,6 +19,22 @@ var clicks = 0;
         
         return false;
     };
+
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js', { scope: '../' })
+        
+        .then(function(reg) {
+            console.log('registered sw (see console)');
+            console.info('registered sw', reg);
+        })
+        .catch(function(err) {
+            console.log('error registering sw (see console)');
+            console.error('error registering sw', err);
+        });
+    } else {
+        app.output('ServiceWorker is not supported');
+    }
+
     var app = {
         init: function() {
             router.routes();

@@ -62,7 +62,7 @@ module.exports = function(grunt) {
   });
  
   // Default task(s).
-  grunt.registerTask('default', []);
+  grunt.registerTask('default', ['uglify', 'cssmin']);
  
  // Load the plugin that provides the "jshint" task
 	grunt.loadNpmTasks('grunt-contrib-jshint');
