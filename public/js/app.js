@@ -9,7 +9,6 @@ var clicks = 0;
     var pagingStart = 0;
     var pagingEnd = 5;
     
-    
     loadMoreButton.onclick = function () {
 
         
@@ -53,9 +52,11 @@ var clicks = 0;
                     while (container.hasChildNodes()) {
                         container.removeChild(container.firstChild);
                     }
+                    loadMoreButton.classList.remove('remove');
                     data.getData('feed', 0, 0, 5);
                 },
                 'appearance/:id' :function(id) {
+                    loadMoreButton.classList.add('remove');
                     data.getData('appearance' , id );
                 }
             });
@@ -64,7 +65,7 @@ var clicks = 0;
     var data = {
         getData : function(dataType, id, start, end) {
             
-
+            console.log('getdata');
             var request = new XMLHttpRequest();
 
             request.onreadystatechange = function() {
