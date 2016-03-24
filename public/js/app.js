@@ -7,13 +7,13 @@ var clicks = 0;
     var container = document.querySelector('main');
     var loadMoreButton = document.getElementById('loadmore');
     var pagingStart = 0;
-    var pagingEnd = 5;
+    var pagingEnd = 10;
     
     loadMoreButton.onclick = function () {
 
         
-        pagingStart += 5;
-        pagingEnd += 5;
+        pagingStart += 10;
+        pagingEnd += 10;
         data.getData('feed', 0, pagingStart, pagingEnd);
         
         return false;
@@ -53,7 +53,7 @@ var clicks = 0;
                         container.removeChild(container.firstChild);
                     }
                     loadMoreButton.classList.remove('remove');
-                    data.getData('feed', 0, 0, 5);
+                    data.getData('feed', 0, 0, 10);
                 },
                 'appearance/:id' :function(id) {
                     loadMoreButton.classList.add('remove');
